@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incredible Tech Projects | Arduino, ESP32 & IoT</title>
+    <meta name="description" content="Premium Arduino, IoT, ESP32 & Robotics Projects for students and hobbyists.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="scroll-progress"></div>
+
+    <div id="loader">
+        <div class="loader-logo">ITP</div>
+        <div class="loader-spinner"></div>
+    </div>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">INCREDIBLE<span>TECH</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Projects</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <i class="fa-solid fa-moon" id="theme-toggle" title="Toggle Theme"></i>
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content reveal">
+            <h1>BUILD THE <span class="neon-text">FUTURE</span></h1>
+            <p>Premium Arduino, IoT, ESP32 & Robotics Projects for Innovators.</p>
+            <div class="hero-buttons">
+                <a href="#shop" class="btn primary-btn">Explore Projects <i class="fa-solid fa-rocket"></i></a>
+                <a href="#features" class="btn secondary-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-3d-element reveal">
+            <div class="cube-container">
+                <div class="cube">
+                    <div class="face front"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="face back"><i class="fa-solid fa-wifi"></i></div>
+                    <div class="face right"><i class="fa-solid fa-robot"></i></div>
+                    <div class="face left"><i class="fa-brands fa-bluetooth"></i></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="section">
+        <div class="section-title reveal">
+            <h2>Why Choose Us</h2>
+            <p>Everything you need to successfully build and defend your project.</p>
+        </div>
+        <div class="feature-grid reveal">
+            <div class="feature-card glass">
+                <i class="fa-solid fa-code"></i>
+                <h3>Full Source Code</h3>
+                <p>Clean, commented, and ready-to-upload code files.</p>
+            </div>
+            <div class="feature-card glass">
+                <i class="fa-solid fa-sitemap"></i>
+                <h3>Circuit Diagrams</h3>
+                <p>High-resolution wiring diagrams for easy assembly.</p>
+            </div>
+            <div class="feature-card glass">
+                <i class="fa-solid fa-book-open"></i>
+                <h3>Setup Guides</h3>
+                <p>Step-by-step documentation and PPT templates.</p>
+            </div>
+            <div class="feature-card glass">
+                <i class="fa-solid fa-headset"></i>
+                <h3>Lifetime Access</h3>
+                <p>Download your files instantly and access them forever.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="section">
+        <div class="section-title reveal">
+            <h2>Project Catalog</h2>
+            <p>Discover top-tier engineering and hobbyist projects.</p>
+        </div>
+        
+        <div class="shop-controls reveal">
+            <div class="search-bar glass">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search by name, category, or tags...">
+            </div>
+            <div class="filters" id="filter-container">
+                </div>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+            </div>
+    </section>
+
+    <section id="faq" class="section">
+        <div class="section-title reveal">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-container reveal">
+            <div class="faq-item glass">
+                <div class="faq-question">How do I receive the files? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">After purchase, you will instantly receive a download link via Payhip and email containing a ZIP file with all project assets.</div>
+            </div>
+            <div class="faq-item glass">
+                <div class="faq-question">Can a beginner build these? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">Yes! We provide difficulty ratings. "Easy" and "Medium" projects come with highly detailed, beginner-friendly wiring guides.</div>
+            </div>
+            <div class="faq-item glass">
+                <div class="faq-question">Are physical components included? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">No, these are digital bundles (Code, Diagrams, Reports, Guides). You will need to purchase the hardware components locally.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="glass">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>INCREDIBLE<span>TECH</span></h2>
+                <p>Empowering the next generation of engineers.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#faq">FAQ</a>
+                <a href="#">Contact Support</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Incredible Tech Projects. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-content glass">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
