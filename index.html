@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Arduino, ESP32, IoT, Robotics, and Final Year Projects. High-quality digital products for engineers and students.">
+    <meta name="keywords" content="Arduino, ESP32, IoT, Robotics, Projects, Code, Engineering">
+    <meta name="author" content="Incredible Tech Projects">
+    <title>Incredible Tech Projects - Arduino, ESP32, IoT & Robotics</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- LOADING SCREEN -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader-container">
+            <div class="loader"></div>
+            <p class="loader-text">Incredible Tech Projects</p>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="#home" class="brand-logo">
+                    <span class="logo-text">◆ ITP</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#categories" class="nav-link">Categories</a></li>
+                <li><a href="#features" class="nav-link">About</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="cart-btn" id="cartBtn">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="particle-container" id="particleContainer"></div>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Incredible Tech Projects</h1>
+                <p class="hero-subtitle">Premium Arduino, IoT, ESP32 & Robotics Projects for Engineers & Students</p>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary btn-lg">Shop Now</a>
+                    <a href="#features" class="btn btn-secondary btn-lg">Learn More</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="5000">0</span>
+                        <span class="stat-label">Students</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="4.9">0</span>
+                        <span class="stat-label">Rating</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-inner">
+                        <div class="robot-emoji">🤖</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <p>Scroll to explore</p>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section class="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div id="featuredContainer" class="featured-grid"></div>
+        </div>
+    </section>
+
+    <!-- SHOP SECTION -->
+    <section id="projects" class="shop">
+        <div class="container">
+            <div class="shop-header">
+                <h2 class="section-title">All Projects</h2>
+                
+                <div class="shop-controls">
+                    <div class="search-box">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="Search projects..." 
+                            class="search-input"
+                        >
+                        <span class="search-icon">🔍</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FILTER BUTTONS -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Arduino">Arduino</button>
+                <button class="filter-btn" data-filter="ESP32">ESP32</button>
+                <button class="filter-btn" data-filter="IoT">IoT</button>
+                <button class="filter-btn" data-filter="Robotics">Robotics</button>
+                <button class="filter-btn" data-filter="FinalYear">Final Year</button>
+            </div>
+
+            <!-- PRODUCT GRID -->
+            <div id="projectsContainer" class="products-grid"></div>
+        </div>
+    </section>
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div id="modalBody" class="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- WHAT BUYER GETS SECTION -->
+    <section class="buyer-benefits">
+        <div class="container">
+            <h2 class="section-title">What You Get</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📝</div>
+                    <h3>Full Source Code</h3>
+                    <p>Complete, documented, well-commented code ready to use</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔌</div>
+                    <h3>Circuit Diagrams</h3>
+                    <p>High-quality circuit diagrams and PCB designs</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Complete Wiring</h3>
+                    <p>Step-by-step wiring guides with images</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Web Dashboard</h3>
+                    <p>Included web/mobile dashboards where applicable</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📚</div>
+                    <h3>Setup Guide</h3>
+                    <p>Detailed setup instructions and troubleshooting</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👨‍💼</div>
+                    <h3>Full Support</h3>
+                    <p>Lifetime access and email support included</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2 class="section-title">Browse by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="filterByCategory('Arduino')">
+                    <div class="category-icon">⚡</div>
+                    <h3>Arduino</h3>
+                </div>
+                <div class="category-card" onclick="filterByCategory('ESP32')">
+                    <div class="category-icon">📡</div>
+                    <h3>ESP32</h3>
+                </div>
+                <div class="category-card" onclick="filterByCategory('IoT')">
+                    <div class="category-icon">🌐</div>
+                    <h3>IoT Systems</h3>
+                </div>
+                <div class="category-card" onclick="filterByCategory('Robotics')">
+                    <div class="category-icon">🤖</div>
+                    <h3>Robotics</h3>
+                </div>
+                <div class="category-card" onclick="filterByCategory('Sensors')">
+                    <div class="category-icon">📊</div>
+                    <h3>Sensors</h3>
+                </div>
+                <div class="category-card" onclick="filterByCategory('FinalYear')">
+                    <div class="category-icon">🎓</div>
+                    <h3>Final Year Projects</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY BUY FROM US SECTION -->
+    <section id="features" class="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="why-us-grid">
+                <div class="why-card">
+                    <div class="why-icon">🎯</div>
+                    <h3>Beginner Friendly</h3>
+                    <p>All projects include step-by-step guides suitable for beginners</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💬</div>
+                    <h3>Full Support</h3>
+                    <p>Email support and detailed documentation included</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💰</div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Premium quality at student-friendly prices</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">⭐</div>
+                    <h3>Professional Quality</h3>
+                    <p>Industrial-grade projects tested and verified</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">⚡</div>
+                    <h3>Instant Download</h3>
+                    <p>Get your project files immediately after purchase</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">♾️</div>
+                    <h3>Lifetime Access</h3>
+                    <p>Update access included forever</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Students Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The Arduino projects are so well explained. I built my first IoT system in 2 days!"</p>
+                    <p class="testimonial-author">- Ramesh Kumar, Engineering Student</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Best value for money. The code is clean, documentation is perfect, and support is amazing."</p>
+                    <p class="testimonial-author">- Sarah Ahmed, Final Year Student</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"I used the robotics bundle for my project. Got an A+ and everyone was impressed!"</p>
+                    <p class="testimonial-author">- Priya Sharma, Robotics Enthusiast</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I receive the project files?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>After purchase, you'll receive a download link via email instantly. All files are in ZIP format and include source code, circuit diagrams, and documentation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is complete source code included?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Every project includes fully documented, commented source code ready to use or modify.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Are circuit diagrams included?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. Each project includes detailed circuit diagrams, wiring guides, and component lists.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can beginners build these projects?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Projects are marked with difficulty levels. Beginners can easily handle Easy and Medium projects with our step-by-step guides.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I modify and use these for my final year project?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, you can modify and use these projects. They're perfect for final year projects, assignments, and personal learning.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is there support after purchase?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! You get lifetime email support. Contact us with any questions or issues.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Connect With Us</h3>
+                    <p>Have questions? Reach out to us on any platform.</p>
+                    
+                    <div class="contact-methods">
+                        <a href="https://wa.me/+94XXXXXXXXX" target="_blank" class="contact-btn whatsapp">
+                            <span class="contact-icon">💬</span>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:hello@incredibletechprojects.com" class="contact-btn email">
+                            <span class="contact-icon">📧</span>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="contact-btn facebook">
+                            <span class="contact-icon">f</span>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="contact-btn instagram">
+                            <span class="contact-icon">📷</span>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" class="contact-btn youtube">
+                            <span class="contact-icon">▶️</span>
+                            <span>YouTube</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-box">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Incredible Tech Projects</h4>
+                    <p>Premium Arduino, ESP32, IoT and Robotics projects for engineers and students worldwide.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#" onclick="filterByCategory('Arduino'); return false;">Arduino</a></li>
+                        <li><a href="#" onclick="filterByCategory('ESP32'); return false;">ESP32</a></li>
+                        <li><a href="#" onclick="filterByCategory('IoT'); return false;">IoT</a></li>
+                        <li><a href="#" onclick="filterByCategory('Robotics'); return false;">Robotics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#" target="_blank">WhatsApp</a></li>
+                        <li><a href="#" target="_blank">Facebook</a></li>
+                        <li><a href="#" target="_blank">Instagram</a></li>
+                        <li><a href="#" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Incredible Tech Projects. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <!-- SCROLL PROGRESS BAR -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
