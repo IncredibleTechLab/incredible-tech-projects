@@ -1,0 +1,2585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incredible Tech Lab - Premium Tech Store</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f9ff;
+overflow-x:hidden;
+color:#111;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:15px 7%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 25px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo-circle{
+width:55px;
+height:55px;
+border-radius:50%;
+background:linear-gradient(135deg,#0066ff,#00c3ff);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+font-weight:bold;
+color:white;
+}
+
+.logo-text h2{
+font-size:26px;
+color:#0047b3;
+}
+
+.logo-text p{
+font-size:13px;
+color:#777;
+}
+
+nav{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+nav a{
+text-decoration:none;
+font-weight:bold;
+color:#003c8f;
+transition:.3s;
+}
+
+nav a:hover{
+color:#0099ff;
+}
+
+.call-btn{
+background:#0066ff;
+padding:12px 22px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+padding:150px 7% 80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
+background:
+linear-gradient(rgba(255,255,255,.85),rgba(255,255,255,.95)),
+url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600');
+background-size:cover;
+background-position:center;
+}
+
+.hero-left{
+flex:1;
+min-width:320px;
+}
+
+.tag{
+display:inline-block;
+padding:12px 22px;
+background:#dceeff;
+border-radius:50px;
+color:#0066ff;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.hero-left h1{
+font-size:60px;
+line-height:1.1;
+color:#003c8f;
+margin-bottom:20px;
+}
+
+.hero-left h1 span{
+color:#0099ff;
+}
+
+.hero-left p{
+font-size:18px;
+line-height:1.8;
+color:#555;
+margin-bottom:25px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.primary-btn{
+padding:16px 32px;
+background:#0066ff;
+color:white;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.secondary-btn{
+padding:16px 32px;
+background:white;
+border:2px solid #0066ff;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+color:#0066ff;
+}
+
+.hero-right{
+flex:1;
+min-width:320px;
+}
+
+.smart-card{
+background:#041a3a;
+padding:20px;
+border-radius:35px;
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+
+.smart-image{
+height:430px;
+border-radius:30px;
+overflow:hidden;
+position:relative;
+background:
+linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.55)),
+url('https://www.techspot.com/images2/news/bigimage/2025/07/2025-07-10-image-30.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:end;
+padding:30px;
+color:white;
+}
+
+.smart-image h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.smart-image p{
+font-size:18px;
+color:#d8ebff;
+}
+
+/* STATS */
+
+.stats{
+padding:70px 7%;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.stat-box{
+background:white;
+padding:35px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.stat-box h2{
+font-size:38px;
+color:#0066ff;
+margin-bottom:10px;
+}
+
+.stat-box p{
+color:#666;
+}
+
+/* PRODUCTS */
+
+.products{
+padding:70px 7%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:45px;
+}
+
+.section-title h2{
+font-size:45px;
+color:#003c8f;
+margin-bottom:10px;
+}
+
+.section-title p{
+font-size:18px;
+color:#666;
+}
+
+.search-box{
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.search-box input{
+width:100%;
+padding:18px;
+border:none;
+outline:none;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+font-size:16px;
+}
+
+.categories{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+margin-bottom:35px;
+}
+
+.category-btn{
+padding:12px 22px;
+border:none;
+background:white;
+border-radius:50px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.category-btn.active{
+background:#0066ff;
+color:white;
+}
+
+/* PRODUCT GRID */
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.product-card{
+background:white;
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.product-card:hover{
+transform:translateY(-10px);
+}
+
+.product-image{
+height:220px;
+position:relative;
+overflow:hidden;
+}
+
+.product-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.product-badge{
+position:absolute;
+top:15px;
+left:15px;
+background:#0066ff;
+color:white;
+padding:8px 14px;
+border-radius:30px;
+font-size:12px;
+font-weight:bold;
+}
+
+.product-content{
+padding:22px;
+}
+
+.product-content h3{
+font-size:21px;
+color:#003c8f;
+margin-bottom:10px;
+}
+
+.product-content p{
+font-size:14px;
+line-height:1.7;
+color:#666;
+margin-bottom:14px;
+}
+
+.price{
+font-size:24px;
+font-weight:bold;
+color:#0066ff;
+margin-bottom:18px;
+}
+
+.product-buttons{
+display:flex;
+gap:10px;
+}
+
+.order-btn{
+flex:1;
+background:#25D366;
+border:none;
+padding:14px;
+border-radius:14px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+.custom-btn{
+flex:1;
+background:#eef5ff;
+border:none;
+padding:14px;
+border-radius:14px;
+color:#0066ff;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* FLOAT BUTTONS */
+
+.float-buttons{
+position:fixed;
+right:20px;
+bottom:20px;
+display:flex;
+flex-direction:column;
+gap:15px;
+z-index:999;
+}
+
+.float-btn{
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+color:white;
+text-decoration:none;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.call{
+background:#0066ff;
+}
+
+@media(max-width:1000px){
+
+.product-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero{
+flex-direction:column;
+}
+
+}
+
+@media(max-width:600px){
+
+.product-grid{
+grid-template-columns:1fr;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.hero-left h1{
+font-size:40px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+
+/* IMAGE / LOGO ADMIN ADD-ON */
+.logo-circle img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:50%;
+}
+
+.admin-open-btn{
+position:fixed;
+left:20px;
+bottom:20px;
+z-index:1000;
+background:#031a3a;
+color:white;
+border:none;
+border-radius:50px;
+padding:14px 20px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.asset-admin-modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.65);
+z-index:10000;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.asset-admin-box{
+background:white;
+width:100%;
+max-width:900px;
+max-height:92vh;
+overflow:auto;
+border-radius:30px;
+padding:30px;
+box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+
+.asset-admin-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+margin-bottom:20px;
+}
+
+.asset-admin-header h2{
+color:#003c8f;
+font-size:30px;
+}
+
+.asset-close{
+width:42px;
+height:42px;
+border:none;
+border-radius:50%;
+background:#eef5ff;
+color:#0066ff;
+font-size:28px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.asset-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+}
+
+.asset-card{
+background:#f4f9ff;
+border:1px solid #d9e7ff;
+border-radius:22px;
+padding:18px;
+}
+
+.asset-card h3{
+color:#003c8f;
+margin-bottom:8px;
+}
+
+.asset-card p{
+color:#666;
+font-size:13px;
+line-height:1.6;
+margin-bottom:12px;
+}
+
+.asset-card input,
+.asset-card select{
+width:100%;
+padding:12px;
+border-radius:14px;
+border:1px solid #d9e7ff;
+background:white;
+}
+
+.asset-actions{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.asset-actions button{
+border:none;
+border-radius:16px;
+padding:14px 18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.save-assets{
+background:#25D366;
+color:white;
+}
+
+.clear-assets{
+background:#ff315a;
+color:white;
+}
+
+.asset-note{
+background:#fff7d6;
+border:1px solid #ffe381;
+color:#5f4600;
+padding:14px;
+border-radius:18px;
+margin-bottom:18px;
+font-weight:bold;
+font-size:14px;
+}
+
+@media(max-width:700px){
+.asset-grid{grid-template-columns:1fr}
+.admin-open-btn{left:12px;bottom:92px}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<div class="logo-circle">
+ITL
+</div>
+
+<div class="logo-text">
+<h2>Incredible Tech Lab</h2>
+<p>Founder: Amhar Mohammed</p>
+</div>
+
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#products">Products</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+
+<a href="tel:0758970187" class="call-btn">
+Call Now
+</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-left">
+
+<div class="tag">
+Premium IoT, Robotics & Security Projects
+</div>
+
+<h1>
+Future <span>Technology</span> For Home, Car & Business
+</h1>
+
+<p>
+Buy useful IoT devices, home automation systems,
+car dashboard bots, desktop AI bots,
+security systems, Arduino projects,
+ESP32 robotics and custom smart products.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#products" class="primary-btn">
+View Products
+</a>
+
+<a href="https://wa.me/94758970187" class="secondary-btn">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="smart-card">
+
+<div class="smart-image">
+
+<div>
+<h2>Smart Project Store</h2>
+<p>
+Home • Car • Robot • Security • Sensor • AI Bot
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="stats">
+
+<div class="stat-box">
+<h2>50+</h2>
+<p>Useful Tech Products</p>
+</div>
+
+<div class="stat-box">
+<h2>10+</h2>
+<p>Project Categories</p>
+</div>
+
+<div class="stat-box">
+<h2>24/7</h2>
+<p>WhatsApp Orders</p>
+</div>
+
+<div class="stat-box">
+<h2>LKR</h2>
+<p>Affordable Local Prices</p>
+</div>
+
+</section>
+
+<section class="products" id="products">
+
+<div class="section-title">
+<h2>Products & Project Store</h2>
+<p>Choose a product, fill the order form, and send details directly to WhatsApp.</p>
+</div>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search home automation, car bot, desktop bot, sensors, security..." onkeyup="renderProducts()">
+</div>
+
+<div class="categories" id="categoryBox"></div>
+
+<div class="product-grid" id="productGrid"></div>
+
+</section>
+
+<!-- ORDER MODAL -->
+
+<div class="order-modal" id="orderModal">
+
+<div class="order-box">
+
+<button class="close-btn" onclick="closeOrder()">×</button>
+
+<h2>Complete Your Order</h2>
+<p class="modal-subtitle">Fill your details. WhatsApp will open automatically with full order details.</p>
+
+<form onsubmit="sendOrder(event)">
+
+<div class="form-row">
+<div class="form-group">
+<label>Customer Name *</label>
+<input type="text" id="customerName" required placeholder="Enter your full name">
+</div>
+
+<div class="form-group">
+<label>Phone Number *</label>
+<input type="tel" id="customerPhone" required placeholder="0771234567">
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label>District / City *</label>
+<input type="text" id="customerCity" required placeholder="Kandy, Colombo, Kurunegala...">
+</div>
+
+<div class="form-group">
+<label>Delivery Method</label>
+<select id="deliveryMethod">
+<option>Delivery</option>
+<option>Pickup</option>
+<option>Discuss on WhatsApp</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label>Full Address</label>
+<textarea id="customerAddress" placeholder="Enter delivery address"></textarea>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label>Selected Product</label>
+<input type="text" id="selectedProduct" readonly>
+</div>
+
+<div class="form-group">
+<label>Product Price</label>
+<input type="text" id="selectedPrice" readonly>
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label>Quantity</label>
+<input type="number" id="quantity" value="1" min="1">
+</div>
+
+<div class="form-group">
+<label>Your Budget</label>
+<input type="text" id="budget" placeholder="Example: LKR 10,000">
+</div>
+</div>
+
+<div class="form-group">
+<label>Extra Requirement / Custom Features</label>
+<textarea id="requirement" placeholder="Example: I need mobile app control, 4 lights, 2 fans, display, buzzer, sensor, etc."></textarea>
+</div>
+
+<button type="submit" class="send-btn">
+<i class="fa-brands fa-whatsapp"></i> Send Order To WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<style>
+.order-modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.65);
+z-index:9999;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.order-box{
+background:white;
+width:100%;
+max-width:850px;
+border-radius:30px;
+padding:35px;
+position:relative;
+max-height:92vh;
+overflow-y:auto;
+box-shadow:0 25px 70px rgba(0,0,0,.35);
+}
+
+.close-btn{
+position:absolute;
+top:18px;
+right:20px;
+width:40px;
+height:40px;
+border:none;
+border-radius:50%;
+background:#eef5ff;
+font-size:28px;
+font-weight:bold;
+color:#0066ff;
+cursor:pointer;
+}
+
+.order-box h2{
+font-size:34px;
+color:#003c8f;
+margin-bottom:8px;
+}
+
+.modal-subtitle{
+color:#666;
+margin-bottom:25px;
+}
+
+.form-row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.form-group{
+margin-bottom:16px;
+}
+
+.form-group label{
+display:block;
+font-weight:bold;
+margin-bottom:8px;
+color:#003c8f;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+width:100%;
+padding:15px;
+border-radius:15px;
+border:1px solid #d9e7ff;
+background:#f8fbff;
+outline:none;
+font-size:15px;
+}
+
+.form-group textarea{
+min-height:90px;
+resize:vertical;
+}
+
+.send-btn{
+width:100%;
+padding:18px;
+border:none;
+border-radius:18px;
+background:#25D366;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+margin-top:10px;
+}
+
+@media(max-width:650px){
+.form-row{
+grid-template-columns:1fr;
+}
+
+.order-box{
+padding:25px;
+}
+}
+</style>
+
+<script>
+const whatsappNumber = "94758970187";
+
+const imageList = [
+"https://images.unsplash.com/photo-1518770660439-4636190af475?w=900",
+"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900",
+"https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=900",
+"https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=900",
+"https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=900",
+"https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=900",
+"https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=900",
+"https://images.unsplash.com/photo-1562408590-e32931084e23?w=900"
+];
+
+const products = [
+{
+name:"Smart Home 4 Channel Automation",
+category:"Home",
+price:"LKR 8,500",
+badge:"Available",
+desc:"Control 4 lights or appliances using mobile web dashboard.",
+img:imageList[0]
+},
+{
+name:"Smart Home 8 Channel Automation",
+category:"Home",
+price:"LKR 14,500",
+badge:"Best Seller",
+desc:"Advanced home automation system for lights, fans and appliances.",
+img:imageList[1]
+},
+{
+name:"WiFi Light Controller",
+category:"Home",
+price:"LKR 4,500",
+badge:"Available",
+desc:"ESP8266/ESP32 based WiFi light control system.",
+img:imageList[2]
+},
+{
+name:"Bluetooth Home Control",
+category:"Home",
+price:"LKR 3,800",
+badge:"Budget",
+desc:"Bluetooth control for home appliances using phone app.",
+img:imageList[3]
+},
+{
+name:"Smart Door Lock",
+category:"Security",
+price:"LKR 7,500",
+badge:"Available",
+desc:"RFID or keypad based smart door locking system.",
+img:imageList[4]
+},
+{
+name:"Fingerprint Door Lock",
+category:"Security",
+price:"LKR 12,500",
+badge:"Premium",
+desc:"Fingerprint secure access system for rooms and offices.",
+img:imageList[5]
+},
+{
+name:"PIR Motion Security Alarm",
+category:"Security",
+price:"LKR 3,500",
+badge:"Available",
+desc:"Human motion detection alarm for home or shop security.",
+img:imageList[6]
+},
+{
+name:"Laser Security Alarm",
+category:"Security",
+price:"LKR 3,000",
+badge:"Budget",
+desc:"Laser beam break security alert system.",
+img:imageList[7]
+},
+{
+name:"Gas Leakage Alert System",
+category:"Sensor",
+price:"LKR 4,200",
+badge:"Safety",
+desc:"Gas sensor alert system with buzzer and warning indicator.",
+img:imageList[0]
+},
+{
+name:"Fire Detection System",
+category:"Sensor",
+price:"LKR 3,900",
+badge:"Safety",
+desc:"Flame sensor based fire warning project.",
+img:imageList[1]
+},
+{
+name:"Water Level Controller",
+category:"Sensor",
+price:"LKR 6,500",
+badge:"Useful",
+desc:"Automatic water tank level monitoring and pump control.",
+img:imageList[2]
+},
+{
+name:"Rain Detection System",
+category:"Sensor",
+price:"LKR 3,500",
+badge:"Available",
+desc:"Rain sensor alert and automatic cover control project.",
+img:imageList[3]
+},
+{
+name:"Soil Moisture Irrigation",
+category:"Agriculture",
+price:"LKR 5,500",
+badge:"Useful",
+desc:"Automatic plant watering system using soil moisture sensor.",
+img:imageList[4]
+},
+{
+name:"Smart Dustbin",
+category:"Home",
+price:"LKR 5,000",
+badge:"Popular",
+desc:"Automatic lid opening dustbin using ultrasonic sensor.",
+img:imageList[5]
+},
+{
+name:"Smart Parking System",
+category:"IoT",
+price:"LKR 18,500",
+badge:"Premium",
+desc:"Parking slot detection, gate servo, LCD and web dashboard.",
+img:imageList[6]
+},
+{
+name:"GPS Live Tracker",
+category:"IoT",
+price:"LKR 9,500",
+badge:"Available",
+desc:"NEO-6M GPS live location tracking project.",
+img:imageList[7]
+},
+{
+name:"Car Dashboard Bot Basic",
+category:"Car",
+price:"LKR 12,500",
+badge:"Custom",
+desc:"Mini dashboard assistant for vehicle status and alerts.",
+img:imageList[0]
+},
+{
+name:"Car Reverse Parking Sensor",
+category:"Car",
+price:"LKR 5,500",
+badge:"Useful",
+desc:"Ultrasonic distance alert system for parking safety.",
+img:imageList[1]
+},
+{
+name:"Car Security Alarm",
+category:"Car",
+price:"LKR 6,500",
+badge:"Security",
+desc:"Motion and vibration alert system for vehicle protection.",
+img:imageList[2]
+},
+{
+name:"Car Temperature Monitor",
+category:"Car",
+price:"LKR 4,500",
+badge:"Available",
+desc:"Temperature and status display system for vehicle dashboard.",
+img:imageList[3]
+},
+{
+name:"Desktop AI Bot Basic",
+category:"Robot",
+price:"LKR 16,500",
+badge:"AI Bot",
+desc:"OLED face, servo movement and smart assistant style demo.",
+img:imageList[4]
+},
+{
+name:"Desktop Robot With Arm",
+category:"Robot",
+price:"LKR 22,500",
+badge:"Premium",
+desc:"Mini desktop robot with servo arm and expression display.",
+img:imageList[5]
+},
+{
+name:"Line Following Robot",
+category:"Robot",
+price:"LKR 9,500",
+badge:"Student",
+desc:"IR sensor based line follower robot for school and campus demo.",
+img:imageList[6]
+},
+{
+name:"Obstacle Avoiding Robot",
+category:"Robot",
+price:"LKR 10,500",
+badge:"Student",
+desc:"Ultrasonic autonomous obstacle avoiding robot car.",
+img:imageList[7]
+},
+{
+name:"Bluetooth RC Car",
+category:"Robot",
+price:"LKR 11,500",
+badge:"Available",
+desc:"Mobile controlled Arduino or ESP32 robot car.",
+img:imageList[0]
+},
+{
+name:"WiFi RC Car",
+category:"Robot",
+price:"LKR 13,500",
+badge:"IoT",
+desc:"Web controlled smart car with browser interface.",
+img:imageList[1]
+},
+{
+name:"ESP32 Camera Bot",
+category:"Robot",
+price:"LKR 19,500",
+badge:"Camera",
+desc:"ESP32-CAM based robot concept with live video streaming.",
+img:imageList[2]
+},
+{
+name:"Mini Rescue Rover",
+category:"Rescue",
+price:"LKR 25,000",
+badge:"Custom",
+desc:"Wheeled rescue rover prototype for disaster demo.",
+img:imageList[3]
+},
+{
+name:"Flood Rescue Boat Model",
+category:"Rescue",
+price:"LKR 24,500",
+badge:"Custom",
+desc:"Water rescue boat prototype with servo steering.",
+img:imageList[4]
+},
+{
+name:"Disaster Alert Dashboard",
+category:"Rescue",
+price:"LKR 18,500",
+badge:"Safety",
+desc:"Fire, flood, gas and tilt alert monitoring dashboard.",
+img:imageList[5]
+},
+{
+name:"Patient Health Monitor",
+category:"Health",
+price:"LKR 14,500",
+badge:"Health",
+desc:"Pulse, SpO2 and temperature monitoring project.",
+img:imageList[6]
+},
+{
+name:"Temperature Humidity Monitor",
+category:"Health",
+price:"LKR 4,500",
+badge:"Available",
+desc:"DHT sensor based display and web dashboard.",
+img:imageList[7]
+},
+{
+name:"Medicine Reminder Box",
+category:"Health",
+price:"LKR 7,500",
+badge:"Useful",
+desc:"Buzzer and display based medicine reminder project.",
+img:imageList[0]
+},
+{
+name:"RFID Attendance System",
+category:"Education",
+price:"LKR 12,500",
+badge:"Campus",
+desc:"RFID based student attendance recording system.",
+img:imageList[1]
+},
+{
+name:"Digital Notice Board",
+category:"Education",
+price:"LKR 9,500",
+badge:"Campus",
+desc:"WiFi text notice display system for school or office.",
+img:imageList[2]
+},
+{
+name:"Exam Hall Timer Display",
+category:"Education",
+price:"LKR 6,500",
+badge:"Useful",
+desc:"Countdown timer display for classroom and exam hall.",
+img:imageList[3]
+},
+{
+name:"Arduino Starter Project Kit",
+category:"Kit",
+price:"LKR 7,500",
+badge:"Starter",
+desc:"Basic Arduino sensors and mini project bundle.",
+img:imageList[4]
+},
+{
+name:"ESP32 IoT Starter Kit",
+category:"Kit",
+price:"LKR 9,500",
+badge:"Starter",
+desc:"ESP32 board with useful sensors for IoT learning.",
+img:imageList[5]
+},
+{
+name:"Sensor Demo Board",
+category:"Kit",
+price:"LKR 8,500",
+badge:"Demo",
+desc:"Multiple sensor demonstration board for learning.",
+img:imageList[6]
+},
+{
+name:"Smart Shop Counter",
+category:"Business",
+price:"LKR 8,000",
+badge:"Business",
+desc:"Customer counter and simple shop analytics demo.",
+img:imageList[7]
+},
+{
+name:"Queue Number Display",
+category:"Business",
+price:"LKR 13,500",
+badge:"Business",
+desc:"Token display system for shop, clinic or service counter.",
+img:imageList[0]
+},
+{
+name:"WiFi Order Display",
+category:"Business",
+price:"LKR 15,500",
+badge:"Business",
+desc:"Simple order and status display system for businesses.",
+img:imageList[1]
+},
+{
+name:"AI Chatbot Website Demo",
+category:"Digital",
+price:"LKR 6,500",
+badge:"Digital",
+desc:"Business website with chatbot style support system.",
+img:imageList[2]
+},
+{
+name:"Portfolio Website Package",
+category:"Digital",
+price:"LKR 4,500",
+badge:"Digital",
+desc:"Personal or business portfolio website package.",
+img:imageList[3]
+},
+{
+name:"E-Commerce Website Demo",
+category:"Digital",
+price:"LKR 9,500",
+badge:"Digital",
+desc:"Product selling website with WhatsApp order system.",
+img:imageList[4]
+},
+{
+name:"YouTube Tech Project Package",
+category:"Digital",
+price:"LKR 3,500",
+badge:"Content",
+desc:"Project article, code, poster and thumbnail package.",
+img:imageList[5]
+},
+{
+name:"Smart Fan Controller",
+category:"Home",
+price:"LKR 6,500",
+badge:"Useful",
+desc:"Temperature based smart fan control project.",
+img:imageList[6]
+},
+{
+name:"Automatic Gate Model",
+category:"Home",
+price:"LKR 8,500",
+badge:"Model",
+desc:"Servo based automatic gate system with sensor input.",
+img:imageList[7]
+},
+{
+name:"Smart Bell System",
+category:"Home",
+price:"LKR 3,500",
+badge:"Budget",
+desc:"Touchless or button based smart door bell project.",
+img:imageList[0]
+},
+{
+name:"PC Desk Status Bot",
+category:"PC",
+price:"LKR 14,500",
+badge:"PC",
+desc:"Mini desk bot for alerts, status display and animation.",
+img:imageList[1]
+},
+{
+name:"PC Temperature Display",
+category:"PC",
+price:"LKR 6,500",
+badge:"PC",
+desc:"PC desk temperature and status display concept device.",
+img:imageList[2]
+},
+{
+name:"Custom Arduino Project",
+category:"Custom",
+price:"Starting LKR 4,500",
+badge:"Custom",
+desc:"Built based on customer requirement and budget.",
+img:imageList[3]
+},
+{
+name:"Custom ESP32 IoT Project",
+category:"Custom",
+price:"Starting LKR 6,500",
+badge:"Custom",
+desc:"WiFi or Bluetooth IoT project based on requirement.",
+img:imageList[4]
+},
+{
+name:"Custom Robotics Project",
+category:"Custom",
+price:"Starting LKR 10,000",
+badge:"Custom",
+desc:"Robot car, desktop bot, robotic arm or rescue prototype.",
+img:imageList[5]
+}
+];
+
+
+function getProductImagesObj(){
+return JSON.parse(localStorage.getItem("itlProductImages") || "{}");
+}
+
+function getProductImage(productName, defaultImage){
+const savedImages = getProductImagesObj();
+return savedImages[productName] || defaultImage;
+}
+
+let activeCategory = "All";
+
+function buildCategories(){
+const box = document.getElementById("categoryBox");
+const categories = ["All", ...new Set(products.map(p => p.category))];
+
+box.innerHTML = categories.map(cat => `
+<button class="category-btn ${cat === activeCategory ? "active" : ""}" onclick="setCategory('${cat}')">
+${cat}
+</button>
+`).join("");
+}
+
+function setCategory(cat){
+activeCategory = cat;
+buildCategories();
+renderProducts();
+}
+
+function renderProducts(){
+const grid = document.getElementById("productGrid");
+const search = document.getElementById("searchInput").value.toLowerCase();
+
+const filtered = products.filter(product => {
+const matchCategory = activeCategory === "All" || product.category === activeCategory;
+const matchSearch =
+product.name.toLowerCase().includes(search) ||
+product.category.toLowerCase().includes(search) ||
+product.desc.toLowerCase().includes(search);
+
+return matchCategory && matchSearch;
+});
+
+grid.innerHTML = filtered.map(product => `
+<div class="product-card">
+
+<div class="product-image">
+<img src="${getProductImage(product.name, product.img)}" alt="${product.name}">
+<div class="product-badge">${product.badge}</div>
+</div>
+
+<div class="product-content">
+<h3>${product.name}</h3>
+<p>${product.desc}</p>
+<div class="price">${product.price}</div>
+
+<div class="product-buttons">
+<button class="order-btn" onclick="openOrder('${product.name}','${product.price}')">
+<i class="fa-brands fa-whatsapp"></i> Order
+</button>
+
+<button class="custom-btn" onclick="openOrder('${product.name}','${product.price}')">
+Custom
+</button>
+</div>
+
+</div>
+
+</div>
+`).join("");
+}
+
+function openOrder(productName, productPrice){
+document.getElementById("orderModal").style.display = "flex";
+document.getElementById("selectedProduct").value = productName;
+document.getElementById("selectedPrice").value = productPrice;
+}
+
+function closeOrder(){
+document.getElementById("orderModal").style.display = "none";
+}
+
+function sendOrder(event){
+event.preventDefault();
+
+const customerName = document.getElementById("customerName").value;
+const customerPhone = document.getElementById("customerPhone").value;
+const customerCity = document.getElementById("customerCity").value;
+const customerAddress = document.getElementById("customerAddress").value;
+const deliveryMethod = document.getElementById("deliveryMethod").value;
+const selectedProduct = document.getElementById("selectedProduct").value;
+const selectedPrice = document.getElementById("selectedPrice").value;
+const quantity = document.getElementById("quantity").value;
+const budget = document.getElementById("budget").value;
+const requirement = document.getElementById("requirement").value;
+
+const message =
+`Hello Incredible Tech Lab,
+
+NEW ORDER REQUEST
+
+Customer Name: ${customerName}
+Phone Number: ${customerPhone}
+District / City: ${customerCity}
+Address: ${customerAddress}
+Delivery Method: ${deliveryMethod}
+
+Product: ${selectedProduct}
+Price: ${selectedPrice}
+Quantity: ${quantity}
+Budget: ${budget}
+
+Extra Requirement:
+${requirement}
+
+Please contact me with details.`;
+
+const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+window.open(url, "_blank");
+}
+
+buildCategories();
+renderProducts();
+</script>
+<!-- ABOUT SECTION -->
+
+<section class="about-section" id="about">
+
+<div class="about-container">
+
+<div class="about-card">
+
+<div class="profile-photo">
+<img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=900" alt="Founder Photo">
+</div>
+
+<h2>Amhar Mohammed</h2>
+<p>Founder - Incredible Tech Lab</p>
+<p>IT Student - SLIATE Kandy</p>
+
+<a href="tel:0758970187" class="profile-call">
+Call Founder
+</a>
+
+</div>
+
+<div class="about-text">
+
+<h2>About Incredible Tech Lab</h2>
+
+<p>
+Incredible Tech Lab is a student-led technology brand focused on useful
+IoT devices, robotics, smart automation, sensor systems, security products,
+websites, AI chatbot demos and custom electronics projects.
+</p>
+
+<p>
+We build practical projects for homes, vehicles, PCs, schools, shops,
+campus exhibitions and small businesses. Customers can order ready-made
+products or request custom projects based on their needs and budget.
+</p>
+
+<div class="about-features">
+
+<div>
+<i class="fa-solid fa-house-signal"></i>
+<h3>Home Automation</h3>
+<p>Smart lights, fans, sensors and appliance control systems.</p>
+</div>
+
+<div>
+<i class="fa-solid fa-robot"></i>
+<h3>Robotics</h3>
+<p>Desktop bots, robot cars, rescue robots and AI bot concepts.</p>
+</div>
+
+<div>
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Security Systems</h3>
+<p>Door locks, alarms, motion detection and safety devices.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CUSTOM PROJECT SECTION -->
+
+<section class="custom-section" id="custom">
+
+<div class="section-title">
+<h2>Request a Custom Project</h2>
+<p>For home, car, PC, shop, campus, school exhibition, robotics or security needs.</p>
+</div>
+
+<div class="custom-box">
+
+<div class="custom-info">
+
+<h2>Need Something Special?</h2>
+
+<p>
+Tell us what you want to build. We can create custom Arduino,
+ESP32, IoT, robotics, sensor and website projects based on your idea.
+</p>
+
+<ul>
+<li>Home automation projects</li>
+<li>Car dashboard bots</li>
+<li>Desktop AI bots</li>
+<li>Security and sensor systems</li>
+<li>School and campus exhibition projects</li>
+<li>Business website and WhatsApp order systems</li>
+</ul>
+
+</div>
+
+<form class="custom-form" onsubmit="sendCustomProject(event)">
+
+<div class="form-group">
+<label>Your Name *</label>
+<input type="text" id="customName" required placeholder="Enter your name">
+</div>
+
+<div class="form-group">
+<label>Phone Number *</label>
+<input type="tel" id="customPhone" required placeholder="0771234567">
+</div>
+
+<div class="form-group">
+<label>Project Category *</label>
+<select id="customCategory" required>
+<option>Home Automation</option>
+<option>Car Bot / Vehicle Project</option>
+<option>Desktop AI Bot</option>
+<option>Security System</option>
+<option>Sensor Project</option>
+<option>Arduino Project</option>
+<option>ESP32 / IoT Project</option>
+<option>Robot Project</option>
+<option>Website / Digital Product</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Budget</label>
+<input type="text" id="customBudget" placeholder="Example: LKR 10,000">
+</div>
+
+<div class="form-group">
+<label>Project Requirement *</label>
+<textarea id="customRequirement" required placeholder="Explain what you want. Example: I need a smart home system to control 4 lights and 2 fans using mobile."></textarea>
+</div>
+
+<button type="submit" class="send-btn">
+<i class="fa-brands fa-whatsapp"></i> Send Custom Request
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- HOW TO ORDER -->
+
+<section class="process-section">
+
+<div class="section-title">
+<h2>How To Order</h2>
+<p>Simple order process for ready products and custom projects.</p>
+</div>
+
+<div class="process-grid">
+
+<div class="process-card">
+<div class="step">1</div>
+<h3>Choose Product</h3>
+<p>Select a product from the store or choose a custom project category.</p>
+</div>
+
+<div class="process-card">
+<div class="step">2</div>
+<h3>Fill Details</h3>
+<p>Add your name, phone, city, address, quantity, budget and requirement.</p>
+</div>
+
+<div class="process-card">
+<div class="step">3</div>
+<h3>Send WhatsApp</h3>
+<p>Your full order details will automatically open in WhatsApp.</p>
+</div>
+
+<div class="process-card">
+<div class="step">4</div>
+<h3>Confirm & Build</h3>
+<p>We confirm price, parts, delivery time and start building the project.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section class="review-section">
+
+<div class="section-title">
+<h2>Customer Reviews</h2>
+<p>Use this section to show real feedback later.</p>
+</div>
+
+<div class="review-grid">
+
+<div class="review-card">
+<h3>Smart Home Customer</h3>
+<p>
+“Good project idea for home automation. Mobile control system is useful and easy to understand.”
+</p>
+<span>★★★★★</span>
+</div>
+
+<div class="review-card">
+<h3>Campus Project Student</h3>
+<p>
+“Helpful for exhibition projects. Arduino and ESP32 project ideas are clear and practical.”
+</p>
+<span>★★★★★</span>
+</div>
+
+<div class="review-card">
+<h3>Security System Buyer</h3>
+<p>
+“Motion alarm and door lock projects are useful for small shops and rooms.”
+</p>
+<span>★★★★★</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="faq-section">
+
+<div class="section-title">
+<h2>FAQ</h2>
+<p>Common questions before ordering.</p>
+</div>
+
+<div class="faq-container">
+
+<div class="faq-item">
+<h3>How long does it take to build a project?</h3>
+<p>Simple projects can take 2–5 days. Advanced custom projects can take 1–3 weeks depending on parts and features.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can I request my own custom project?</h3>
+<p>Yes. You can send your idea through the custom project form and discuss features on WhatsApp.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you provide delivery?</h3>
+<p>Delivery can be discussed based on your location. Pickup and local delivery options can be arranged.</p>
+</div>
+
+<div class="faq-item">
+<h3>Are the prices fixed?</h3>
+<p>No. Custom project prices depend on components, size, features and deadline. Ready product prices are starting prices.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you provide support after buying?</h3>
+<p>Basic testing support is available. Damage caused by wrong power, water, short circuits or burned boards is not covered.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+
+<div class="contact-box">
+
+<h2>Contact Incredible Tech Lab</h2>
+
+<p>
+For IoT projects, robotics, home automation, security systems,
+desktop bots, car bots, websites and custom technology projects.
+</p>
+
+<div class="contact-buttons">
+
+<a href="tel:0758970187">
+<i class="fa-solid fa-phone"></i> Call 0758970187
+</a>
+
+<a href="https://wa.me/94758970187" target="_blank">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+<h3>Incredible Tech Lab</h3>
+<p>
+Useful IoT, robotics, automation, security, sensor and custom technology projects.
+</p>
+<p><b>Founder:</b> Amhar Mohammed</p>
+<p><b>Phone:</b> 0758970187</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+<a href="#">Home</a>
+<a href="#products">Products</a>
+<a href="#custom">Custom Project</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div>
+<h3>Social Links</h3>
+<a href="YOUR_BLOGGER_LINK_HERE" target="_blank">Blogger</a>
+<a href="YOUR_YOUTUBE_LINK_HERE" target="_blank">YouTube</a>
+<a href="YOUR_INSTAGRAM_LINK_HERE" target="_blank">Instagram</a>
+<a href="YOUR_FACEBOOK_LINK_HERE" target="_blank">Facebook</a>
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 Incredible Tech Lab. Built by Amhar Mohammed.
+</div>
+
+</footer>
+
+
+<!-- IMAGE / LOGO ADMIN PANEL -->
+<button class="admin-open-btn" onclick="openAdminLogin()">
+<i class="fa-solid fa-image"></i> Admin Images
+</button>
+
+<div class="asset-admin-modal" id="assetAdminModal">
+
+<div class="asset-admin-box">
+
+<div class="asset-admin-header">
+<h2>Admin Image Manager</h2>
+<button class="asset-close" onclick="closeAssetAdmin()">×</button>
+</div>
+
+<div class="asset-note">
+Use this to add your real logo, founder photo, hero background and product photos. Photos are saved in this browser using localStorage. For a real business website with permanent admin sync, use Firebase later.
+</div>
+
+<div class="asset-grid">
+
+<div class="asset-card">
+<h3>Company Logo</h3>
+<p>Upload your Incredible Tech Lab logo. Square image is best.</p>
+<input type="file" id="logoUpload" accept="image/*" capture="environment">
+</div>
+
+<div class="asset-card">
+<h3>Founder Photo</h3>
+<p>Upload your photo for the founder section.</p>
+<input type="file" id="founderUpload" accept="image/*" capture="environment">
+</div>
+
+<div class="asset-card">
+<h3>Main Hero Background</h3>
+<p>Upload a background image for the top hero section.</p>
+<input type="file" id="heroBgUpload" accept="image/*" capture="environment">
+</div>
+
+<div class="asset-card">
+<h3>Smart Project Store Image</h3>
+<p>Upload your Arduino Smart Project Store background/banner image.</p>
+<input type="file" id="smartBgUpload" accept="image/*" capture="environment">
+</div>
+
+<div class="asset-card">
+<h3>Contact Background</h3>
+<p>Upload contact section background image.</p>
+<input type="file" id="contactBgUpload" accept="image/*" capture="environment">
+</div>
+
+<div class="asset-card">
+<h3>Product Photo</h3>
+<p>Select product and upload its real photo from camera/gallery.</p>
+<select id="productImageSelect"></select>
+<br><br>
+<input type="file" id="productImageUpload" accept="image/*" capture="environment">
+</div>
+
+</div>
+
+<div class="asset-actions">
+<button class="save-assets" onclick="saveAssetImages()">Save Images</button>
+<button class="clear-assets" onclick="clearAssetImages()">Clear Saved Images</button>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FLOATING BUTTONS -->
+
+<div class="float-buttons">
+
+<a href="https://wa.me/94758970187" target="_blank" class="float-btn whatsapp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<a href="tel:0758970187" class="float-btn call">
+<i class="fa-solid fa-phone"></i>
+</a>
+
+</div>
+
+<style>
+
+/* ABOUT */
+
+.about-section{
+padding:80px 7%;
+background:linear-gradient(135deg,#003c8f,#0066ff);
+color:white;
+}
+
+.about-container{
+display:grid;
+grid-template-columns:350px 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about-card{
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.2);
+padding:35px;
+border-radius:35px;
+text-align:center;
+}
+
+.profile-photo{
+width:180px;
+height:180px;
+border-radius:50%;
+margin:auto;
+margin-bottom:20px;
+overflow:hidden;
+border:6px solid rgba(255,255,255,.25);
+}
+
+.profile-photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.about-card h2{
+font-size:30px;
+margin-bottom:8px;
+}
+
+.about-card p{
+color:#dbeaff;
+margin-bottom:8px;
+}
+
+.profile-call{
+display:inline-block;
+margin-top:18px;
+background:white;
+color:#0066ff;
+padding:13px 25px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.about-text h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.about-text p{
+font-size:17px;
+line-height:1.8;
+color:#e9f4ff;
+margin-bottom:15px;
+}
+
+.about-features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:25px;
+}
+
+.about-features div{
+background:rgba(255,255,255,.12);
+padding:25px;
+border-radius:25px;
+}
+
+.about-features i{
+font-size:32px;
+margin-bottom:15px;
+}
+
+/* CUSTOM */
+
+.custom-section{
+padding:80px 7%;
+background:#f4f9ff;
+}
+
+.custom-box{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:35px;
+background:white;
+padding:40px;
+border-radius:35px;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+}
+
+.custom-info h2{
+font-size:36px;
+color:#003c8f;
+margin-bottom:15px;
+}
+
+.custom-info p{
+color:#555;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+.custom-info ul{
+padding-left:20px;
+color:#333;
+line-height:2;
+}
+
+/* PROCESS */
+
+.process-section{
+padding:80px 7%;
+background:white;
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.process-card{
+background:#f4f9ff;
+padding:30px;
+border-radius:30px;
+box-shadow:0 8px 30px rgba(0,0,0,.06);
+text-align:center;
+}
+
+.step{
+width:55px;
+height:55px;
+border-radius:50%;
+background:#0066ff;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+font-weight:bold;
+margin:auto;
+margin-bottom:18px;
+}
+
+.process-card h3{
+color:#003c8f;
+margin-bottom:10px;
+}
+
+.process-card p{
+color:#666;
+line-height:1.7;
+}
+
+/* REVIEWS */
+
+.review-section{
+padding:80px 7%;
+background:#f4f9ff;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.review-card{
+background:white;
+padding:30px;
+border-radius:30px;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+}
+
+.review-card h3{
+color:#003c8f;
+margin-bottom:12px;
+}
+
+.review-card p{
+color:#555;
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.review-card span{
+color:#ffb300;
+font-size:22px;
+}
+
+/* FAQ */
+
+.faq-section{
+padding:80px 7%;
+background:white;
+}
+
+.faq-container{
+max-width:900px;
+margin:auto;
+}
+
+.faq-item{
+background:#f4f9ff;
+padding:25px;
+border-radius:25px;
+margin-bottom:18px;
+}
+
+.faq-item h3{
+color:#003c8f;
+margin-bottom:10px;
+}
+
+.faq-item p{
+color:#555;
+line-height:1.7;
+}
+
+/* CONTACT */
+
+.contact-section{
+padding:80px 7%;
+background:
+linear-gradient(rgba(0,60,143,.88),rgba(0,102,255,.9)),
+url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600');
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+}
+
+.contact-box{
+max-width:800px;
+margin:auto;
+}
+
+.contact-box h2{
+font-size:44px;
+margin-bottom:18px;
+}
+
+.contact-box p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:30px;
+color:#e9f4ff;
+}
+
+.contact-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.contact-buttons a{
+background:white;
+color:#0066ff;
+padding:15px 28px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+background:#031a3a;
+color:white;
+padding:60px 7% 25px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:1.3fr 1fr 1fr;
+gap:35px;
+margin-bottom:35px;
+}
+
+footer h3{
+margin-bottom:18px;
+font-size:24px;
+}
+
+footer p{
+color:#dbeaff;
+line-height:1.8;
+margin-bottom:8px;
+}
+
+footer a{
+display:block;
+color:#dbeaff;
+text-decoration:none;
+margin-bottom:10px;
+}
+
+footer a:hover{
+color:#00c3ff;
+}
+
+.copyright{
+text-align:center;
+border-top:1px solid rgba(255,255,255,.15);
+padding-top:20px;
+color:#bcdcff;
+}
+
+/* RESPONSIVE EXTRA */
+
+@media(max-width:1000px){
+
+.about-container,
+.custom-box,
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.about-features,
+.review-grid,
+.process-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.about-features,
+.review-grid,
+.process-grid{
+grid-template-columns:1fr;
+}
+
+.about-text h2,
+.contact-box h2{
+font-size:34px;
+}
+
+.custom-box{
+padding:25px;
+}
+
+.float-btn{
+width:58px;
+height:58px;
+font-size:24px;
+}
+
+}
+
+</style>
+
+<script>
+
+function sendCustomProject(event){
+event.preventDefault();
+
+const name = document.getElementById("customName").value;
+const phone = document.getElementById("customPhone").value;
+const category = document.getElementById("customCategory").value;
+const budget = document.getElementById("customBudget").value;
+const requirement = document.getElementById("customRequirement").value;
+
+const message =
+`Hello Incredible Tech Lab,
+
+CUSTOM PROJECT REQUEST
+
+Customer Name: ${name}
+Phone Number: ${phone}
+Project Category: ${category}
+Budget: ${budget}
+
+Requirement:
+${requirement}
+
+Please contact me and send price details.`;
+
+const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+window.open(url, "_blank");
+}
+
+window.onclick = function(event){
+const modal = document.getElementById("orderModal");
+if(event.target === modal){
+closeOrder();
+}
+}
+
+
+function openAssetAdmin(){
+document.getElementById("assetAdminModal").style.display = "flex";
+loadProductImageSelect();
+}
+
+function closeAssetAdmin(){
+document.getElementById("assetAdminModal").style.display = "none";
+}
+
+function loadProductImageSelect(){
+const select = document.getElementById("productImageSelect");
+if(!select) return;
+select.innerHTML = products.map(product => `<option value="${product.name}">${product.name}</option>`).join("");
+}
+
+function compressImage(file, maxWidth = 1200, quality = 0.75){
+return new Promise((resolve, reject) => {
+if(!file){
+resolve(null);
+return;
+}
+
+const reader = new FileReader();
+
+reader.onload = event => {
+const img = new Image();
+
+img.onload = () => {
+const canvas = document.createElement("canvas");
+let width = img.width;
+let height = img.height;
+
+if(width > maxWidth){
+height = Math.round((height * maxWidth) / width);
+width = maxWidth;
+}
+
+canvas.width = width;
+canvas.height = height;
+
+const ctx = canvas.getContext("2d");
+ctx.drawImage(img, 0, 0, width, height);
+
+resolve(canvas.toDataURL("image/jpeg", quality));
+};
+
+img.onerror = reject;
+img.src = event.target.result;
+};
+
+reader.onerror = reject;
+reader.readAsDataURL(file);
+});
+}
+
+async function saveSingleAsset(inputId, storageKey){
+const input = document.getElementById(inputId);
+if(input && input.files && input.files[0]){
+const dataUrl = await compressImage(input.files[0]);
+localStorage.setItem(storageKey, dataUrl);
+}
+}
+
+async function saveAssetImages(){
+await saveSingleAsset("logoUpload", "itlLogo");
+await saveSingleAsset("founderUpload", "itlFounderPhoto");
+await saveSingleAsset("heroBgUpload", "itlHeroBg");
+await saveSingleAsset("smartBgUpload", "itlSmartBg");
+await saveSingleAsset("contactBgUpload", "itlContactBg");
+
+const productInput = document.getElementById("productImageUpload");
+const productSelect = document.getElementById("productImageSelect");
+
+if(productInput && productInput.files && productInput.files[0] && productSelect.value){
+const dataUrl = await compressImage(productInput.files[0]);
+const savedImages = getProductImagesObj();
+savedImages[productSelect.value] = dataUrl;
+localStorage.setItem("itlProductImages", JSON.stringify(savedImages));
+}
+
+applyAssetImages();
+renderProducts();
+alert("Images saved successfully.");
+}
+
+function applyAssetImages(){
+const logo = localStorage.getItem("itlLogo");
+const founderPhoto = localStorage.getItem("itlFounderPhoto");
+const heroBg = localStorage.getItem("itlHeroBg");
+const smartBg = localStorage.getItem("itlSmartBg");
+const contactBg = localStorage.getItem("itlContactBg");
+
+if(logo){
+document.querySelector(".logo-circle").innerHTML = `<img src="${logo}" alt="Logo">`;
+}
+
+if(founderPhoto){
+const founderImg = document.querySelector(".profile-photo img");
+if(founderImg){
+founderImg.src = founderPhoto;
+}
+}
+
+if(heroBg){
+const hero = document.querySelector(".hero");
+if(hero){
+hero.style.backgroundImage = `linear-gradient(rgba(255,255,255,.85),rgba(255,255,255,.95)), url('${heroBg}')`;
+}
+}
+
+if(smartBg){
+const smartImage = document.querySelector(".smart-image");
+if(smartImage){
+smartImage.style.backgroundImage = `linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.55)), url('${smartBg}')`;
+}
+}
+
+if(contactBg){
+const contact = document.querySelector(".contact-section");
+if(contact){
+contact.style.backgroundImage = `linear-gradient(rgba(0,60,143,.88),rgba(0,102,255,.9)), url('${contactBg}')`;
+}
+}
+}
+
+function clearAssetImages(){
+if(!confirm("Clear all saved logo/photos/backgrounds from this browser?")) return;
+
+localStorage.removeItem("itlLogo");
+localStorage.removeItem("itlFounderPhoto");
+localStorage.removeItem("itlHeroBg");
+localStorage.removeItem("itlSmartBg");
+localStorage.removeItem("itlContactBg");
+localStorage.removeItem("itlProductImages");
+
+alert("Saved images cleared. Refreshing page.");
+location.reload();
+}
+
+applyAssetImages();
+
+
+</script>
+
+
+<!-- FIXED ADMIN LOGIN SYSTEM -->
+<div id="adminLoginModal" style="
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:99999;
+">
+
+<div style="
+background:white;
+padding:35px;
+border-radius:25px;
+width:90%;
+max-width:400px;
+text-align:center;
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+">
+
+<h2 style="color:#0066ff;margin-bottom:20px;font-size:30px;">
+Admin Login
+</h2>
+
+<input type="text" id="adminUsername" placeholder="Username" style="
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border-radius:12px;
+border:1px solid #ddd;
+outline:none;
+font-size:16px;
+">
+
+<input type="password" id="adminPassword" placeholder="Password" style="
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border-radius:12px;
+border:1px solid #ddd;
+outline:none;
+font-size:16px;
+">
+
+<button onclick="loginAdmin()" style="
+width:100%;
+padding:15px;
+background:#0066ff;
+color:white;
+border:none;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+">
+Login
+</button>
+
+<button onclick="closeAdminLogin()" style="
+width:100%;
+padding:13px;
+background:#eef5ff;
+color:#0066ff;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+margin-top:10px;
+">
+Cancel
+</button>
+
+</div>
+</div>
+
+<script>
+const ADMIN_USERNAME = "admin";
+const ADMIN_PASSWORD = "amhar123";
+
+function openAdminLogin(){
+  document.getElementById("adminLoginModal").style.display = "flex";
+}
+
+function closeAdminLogin(){
+  document.getElementById("adminLoginModal").style.display = "none";
+}
+
+function loginAdmin(){
+  const username = document.getElementById("adminUsername").value.trim();
+  const password = document.getElementById("adminPassword").value.trim();
+
+  if(username === ADMIN_USERNAME && password === ADMIN_PASSWORD){
+    document.getElementById("adminLoginModal").style.display = "none";
+    document.getElementById("assetAdminModal").style.display = "flex";
+    if(typeof loadProductImageSelect === "function"){
+      loadProductImageSelect();
+    }
+  }else{
+    alert("Wrong Username or Password");
+  }
+}
+</script>
+
+</body>
+</html>
